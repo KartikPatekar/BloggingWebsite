@@ -1,0 +1,16 @@
+baseURL = 'https://blog.kartikpatekar.com/' # We'll update this later
+languageCode = 'en-us'
+title = 'Spiralling ideas'
+theme = 'cleanwhite'
+
+# Enable Emoji and LaTeX support
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true # Allows raw HTML, needed for LaTeX
+  [markup.highlight]
+    guessSyntax = true
+
+# Configure your default parameters
+[params]
+  description = "The description of my blog"
