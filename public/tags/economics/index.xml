@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Economics on Thoughts on track</title>
+    <link>http://localhost:1313/tags/economics/</link>
+    <description>Recent content in Economics on Thoughts on track</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 17 Oct 2025 18:19:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/economics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IV Traffic House Prices</title>
+      <link>http://localhost:1313/post/iv_traffic_houseprices/</link>
+      <pubDate>Fri, 17 Oct 2025 18:19:00 +0530</pubDate>
+      <guid>http://localhost:1313/post/iv_traffic_houseprices/</guid>
+      <description>&lt;h2 id=&#34;welcome-to-my-blog&#34;&gt;Welcome to My Blog!&lt;/h2&gt;&#xA;&lt;p&gt;This is written in simple &lt;strong&gt;Markdown&lt;/strong&gt;. It&amp;rsquo;s so much easier than HTML!&lt;/p&gt;&#xA;&lt;h3 id=&#34;embedding-an-image&#34;&gt;Embedding an Image&lt;/h3&gt;&#xA;&lt;p&gt;&#xD;&#xA;  &lt;figure&gt;&#xD;&#xA;    &lt;img src=&#34;http://localhost:1313/images/cat.jpg&#34; alt=&#34;A cute cat&#34;&gt;&#xD;&#xA;    &lt;center&gt;&lt;figcaption&gt;My Cat&lt;/figcaption&gt;&lt;/center&gt;&#xD;&#xA;  &lt;/figure&gt;&#xD;&#xA;&#xD;&#xA;&lt;/p&gt;&#xA;&lt;h3 id=&#34;embedding-a-gif&#34;&gt;Embedding a GIF&lt;/h3&gt;&#xA;&lt;p&gt;&#xD;&#xA;  &lt;img src=&#34;http://localhost:1313/gifs/reaction.gif&#34; alt=&#34;Funny Reaction GIF&#34;&gt;&#xD;&#xA;&#xD;&#xA;&lt;/p&gt;&#xA;&lt;h3 id=&#34;writing-latex-math&#34;&gt;Writing LaTeX Math&lt;/h3&gt;&#xA;&lt;p&gt;Now for the cool part. You can write beautiful math equations.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Inline LaTeX:&lt;/strong&gt; The Pythagorean theorem is $a^2 + b^2 = c^2$.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Block LaTeX:&lt;/strong&gt;&#xA;$$&#xA;\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}&#xA;$$&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
