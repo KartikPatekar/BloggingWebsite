@@ -18,11 +18,11 @@ hasCJKLanguage = true
 home = ["HTML", "RSS", "Algolia"]
 
 [params]
-  header_image = "img/home-bg-jeep.jpg"
+  header_image = "general/blog_bg.png"
   SEOTitle = "Your Blog Title | Your Name Blog"
   description = "Your description here"
   keyword = "your, keywords, here"
-  slogan = "My attempts at understanding economics research"
+  slogan = "My attempts at understanding research papers"
   upstreamAttribution = true
 
   image_404 = "img/404-bg.jpg"
@@ -61,15 +61,15 @@ home = ["HTML", "RSS", "Algolia"]
   # Disabled for security
   reward = false
   
-  friends = true
+  friends = false
   bookmarks = false
   about_me = true
   last_posts = true
 
   [params.social]
   rss = true 
-  email = "your-email@example.com"
-  linkedin = "https://www.linkedin.com/in/yourprofile"
+  email = ""
+  linkedin = "https://www.linkedin.com/in/kartikpatekar"
   stackoverflow = "https://stackoverflow.com/users/yourid"
   github = "https://github.com/yourusername"
   wechat = "img/wechat-qr-placeholder.png"
@@ -82,16 +82,22 @@ home = ["HTML", "RSS", "Algolia"]
   [[params.bookmark_link]]
   title = "Example Site"
   href = "https://example.com"
-  
+
   [[params.additional_menus]]
-  title = "ARCHIVE"
-  href = "/archive/"
-  [[params.additional_menus]]
-  title = "NOTES"
-  href = "/notes/"
-  [[params.additional_menus]]
-  title = "ABOUT"
-  href = "/about/"
+  title = "MyWebsite"
+  href = "https://www.kartikpatekar.com"  
+  #  [[params.additional_menus]]
+  #  title = "ARCHIVE"
+  #  href = "/archive/"
+  #  [[params.additional_menus]]
+  #  title = "NOTES"
+  #  href = "/notes/"
+  #  [[params.additional_menus]]
+  #  title = "Personal W"
+  #  href = "/about/"
+
+  # Custom CSS
+  custom_css = ["css/custom.css"]
 
 [outputFormats.Algolia]
 baseName = "algolia"

@@ -1,0 +1,30 @@
+/* Custom CSS for Hugo Cleanwhite Theme */
+/* Change site title color from white to navy blue */
+.navbar-custom .navbar-brand {
+    color: #000080 !important;
+}
+
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus {
+    color: #000060 !important;
+}
+
+/* For fixed navbar state */
+.navbar-custom.is-fixed .navbar-brand {
+    color: #000080 !important;
+}
+
+.navbar-custom.is-fixed .navbar-brand:hover,
+.navbar-custom.is-fixed .navbar-brand:focus {
+    color: #000060 !important;
+}
+
+/* For inverted navbar state */
+.navbar-custom.invert .navbar-brand {
+    color: #000080 !important;
+}
+
+.navbar-custom.invert .navbar-brand:hover,
+.navbar-custom.invert .navbar-brand:focus {
+    color: #000060 !important;
+}
