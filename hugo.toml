@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "https://blog.kartikpatekar.com/"
 title = "Thoughts on track"
 theme = "cleanwhite"
 languageCode = "en-us"
