@@ -98,6 +98,9 @@ home = ["HTML", "RSS", "Algolia"]
 
   # Custom CSS
   custom_css = ["css/custom.css"]
+  
+  # Custom JavaScript
+  custom_js = ["js/comments.js"]
 
 [outputFormats.Algolia]
 baseName = "algolia"
@@ -120,7 +123,10 @@ params = ["categories", "tags"]
       unsafe = false  # Changed to false for security
     [markup.goldmark.extensions]
       [markup.goldmark.extensions.passthrough]
-        enable = false  # Disabled for security
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)'], ['$', '$']]
 
 [mediaTypes]
   [mediaTypes.'font/woff']

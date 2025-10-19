@@ -1,0 +1,14 @@
+{{ if .Params.comments }}
+<section class="sidebar-comments">
+    <hr class="hidden-sm hidden-xs">
+    <h5>NOTES</h5>
+    <div class="comments-list">
+        {{ range $id, $comment := .Params.comments }}
+        <div class="comment-item" data-comment-id="{{ $id }}">
+            <div class="comment-ref">[{{ $id }}]</div>
+            <div class="comment-text">{{ $comment | markdownify }}</div>
+        </div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}
