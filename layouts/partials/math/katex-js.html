@@ -1,0 +1,42 @@
+{{ $jsFile := cond hugo.IsProduction "katex.min.js" "katex.js" -}}
+{{ $jsUrl := printf "https://unpkg.com/katex@latest/dist/%s" $jsFile -}}
+{{ with try (resources.GetRemote $jsUrl) -}}
+  {{ with .Err -}}
+    {{ errorf "Could not retrieve KaTeX js file from CDN. Reason: %s." . -}}
+  {{ else with .Value -}}
+    {{ with resources.Copy (printf "js/%s" $jsFile) . -}}
+      {{ $jsHash := . | fingerprint "sha512" -}}
+<script src="{{- .RelPermalink -}}" integrity="{{- $jsHash.Data.Integrity -}}" crossorigin="anonymous"></script>
+    {{ end -}}
+  {{ else -}}
+    {{ errorf "Could not retrieve js file %q from CDN. Reason: invalid KaTeX version %q." $jsUrl "latest" -}}
+  {{ end -}}
+{{ end -}}
+
+{{ $autoRenderFile := cond hugo.IsProduction "contrib/auto-render.min.js" "contrib/auto-render.js" -}}
+{{ $autoRenderUrl := printf "https://unpkg.com/katex@latest/dist/%s" $autoRenderFile -}}
+{{ with try (resources.GetRemote $autoRenderUrl) -}}
+  {{ with .Err -}}
+    {{ errorf "Could not retrieve KaTeX auto-render js file from CDN. Reason: %s." . -}}
+  {{ else with .Value -}}
+    {{ with resources.Copy (printf "js/%s" $autoRenderFile) . -}}
+      {{ $jsHash := . | fingerprint "sha512" -}}
+<script src="{{- .RelPermalink -}}" integrity="{{- $jsHash.Data.Integrity -}}" crossorigin="anonymous"></script>
+    {{ end -}}
+  {{ else -}}
+    {{ errorf "Could not retrieve auto-render js file %q from CDN. Reason: invalid KaTeX version %q." $autoRenderUrl "latest" -}}
+  {{ end -}}
+{{ end -}}
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false},
+            {left: "\\[", right: "\\]", display: true}
+        ]
+    });
+});
+</script>

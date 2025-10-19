@@ -1,0 +1,4 @@
+{{ .Text -}}
+{{- if or (findRE `\$\$[^$]+\$\$` .Text) (findRE `\$[^$]+\$` .Text) (findRE `\\\([^)]+\\\)` .Text) (findRE `\\\[[^]]+\\\]` .Text) -}}
+  {{- $.Page.Store.Set "hasMath" true -}}
+{{- end -}}
