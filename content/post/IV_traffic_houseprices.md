@@ -54,4 +54,4 @@ which is the correct causal effect of $X$ on $Y$. Although we only looked at the
     - **Exclusion Restriction:** Fixing controls $C$, the instrument $Z$ affects outcome $Y$ only through $X$.  
     - **As-if random:** Fixing controls $C$, the instrument itself must not be endogenous. This rules out any reverse causality from $Y$ to $X$.
 
-## References
+## References -- 
