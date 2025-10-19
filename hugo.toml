@@ -6,8 +6,8 @@ preserveTaxonomyNames = true
 hasCJKLanguage = true
 
 [services]
-  [services.disqus]
-    shortname = "YOUR_DISQUS_SHORTNAME"
+  # [services.disqus]
+  #   shortname = "YOUR_DISQUS_SHORTNAME"
   [services.googleAnalytics]
     id = "YOUR_GA_ID"
 
