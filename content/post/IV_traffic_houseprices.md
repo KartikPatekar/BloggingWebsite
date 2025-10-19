@@ -1,5 +1,5 @@
 ---
-title: "IV method with application to traffic and house prices"
+title: "IV method and its application to traffic's impact on house prices"
 subtitle: "A quick introduction to IV regressions in causal analysis and it's application to calculate the effect of street traffic on housing prices"
 date: 2025-10-17T18:19:00+05:30
 author: "Kartik Patekar"
@@ -12,7 +12,6 @@ comments:
   2: "To be precise, the method described here calculates the 2SLS estimator, which is the most popular estimator in the class of IV estimators. Other IV estimators include the limited information maximum likelihood (LIML) estimator, generalized method of moments (GMM) estimator, and k-estimators."
   3: "The causal effect estimate obtained from IV method is the average treatment effect on compilers (LATE)."
 ---
-## IV method with application to traffic and house prices
 
 If we believe that a variable $X$ causes (or affects) another variable $Y$, we are often interested in studying how much the value of $Y$ changes if we make a small $\delta x$ change in $X$. For example, how much do people dislike traffic on their street can be measured by decrease in house prices in response to increase in street traffic. The statistical technique most commonly used to answer causal questions is the linear regression {{< comment id="1" />}}
 $$ Y = \beta X + C\gamma + \epsilon $$
@@ -34,8 +33,8 @@ $$ \hat \beta_{OLS} = \frac{Cov(X,Y)}{Var(X)} = 3$$
 In the IV framework, we use an instrument $Z$ that affects $Y$ only through $X$ (exogeneity requirement). The IV regression proceeds in 2 stages {{< comment id="2" />}}
 $$
 \begin{align*}
-  \text{Stage 1}&:~~~ X = \delta Z + \hat \eta \implies \hat X =\hat \delta_{IV1} Z \\
-  \text{Stage 2}&:~~~ Y = \beta \hat X + \hat \zeta = \beta \hat \delta_{IV1} Z + \hat \zeta 
+  \text{First Stage}&:~~~ X = \delta Z + \hat \eta \implies \hat X =\hat \delta_{IV1} Z \\
+  \text{Second Stage}&:~~~ Y = \beta \hat X + \hat \zeta = \beta \hat \delta_{IV1} Z + \hat \zeta 
 \end{align*}
 $$
 
@@ -54,4 +53,4 @@ which is the correct causal effect of $X$ on $Y$. Although we only looked at the
     - **Exclusion Restriction:** Fixing controls $C$, the instrument $Z$ affects outcome $Y$ only through $X$.  
     - **As-if random:** Fixing controls $C$, the instrument itself must not be endogenous. This rules out any reverse causality from $Y$ to $X$.
 
-## References -- 
+## References
