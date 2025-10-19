@@ -2,28 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:47893/post/</loc>
+    <loc>http://localhost:1313/post/</loc>
     <lastmod>2025-10-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:47893/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2025-10-17T18:19:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:47893/categories/economics/</loc>
+    <loc>http://localhost:1313/categories/economics/</loc>
     <lastmod>2025-10-17T18:19:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:47893/tags/empirics/</loc>
+    <loc>http://localhost:1313/tags/empirics/</loc>
     <lastmod>2025-10-17T18:19:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:47893/tags/externality/</loc>
+    <loc>http://localhost:1313/tags/externality/</loc>
     <lastmod>2025-10-17T18:19:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:47893/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2025-10-17T18:19:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:47893/post/iv_traffic_houseprices/</loc>
+    <loc>http://localhost:1313/post/iv_traffic_houseprices/</loc>
     <lastmod>2025-10-17T18:19:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:47893/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-10-17T18:19:00+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/about/</loc>
+    <lastmod>2025-10-17T00:00:00+00:00</lastmod>
   </url>
 </urlset>
