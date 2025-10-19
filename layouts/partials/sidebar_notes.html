@@ -1,0 +1,14 @@
+{{ if .Params.notes }}
+<section class="sidebar-notes">
+    <hr class="hidden-sm hidden-xs">
+    <h5>NOTES</h5>
+    <div class="notes-list">
+        {{ range $id, $note := .Params.notes }}
+        <div class="note-item" data-note-id="{{ $id }}">
+            <div class="note-ref">[{{ $id }}]</div>
+            <div class="note-text">{{ $note | markdownify }}</div>
+        </div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}

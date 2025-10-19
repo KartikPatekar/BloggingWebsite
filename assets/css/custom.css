@@ -52,31 +52,33 @@
     text-decoration: none;
 }
 
-/* Sidebar Comments Styling */
-.sidebar-comments {
+/* Sidebar Notes Styling */
+.sidebar-notes {
     margin-bottom: 20px;
 }
 
-.sidebar-comments h5 {
+.sidebar-notes h5 {
     color: #2c3e50;
     font-weight: 600;
     margin-bottom: 15px;
 }
 
-.comments-list {
+.notes-list {
     max-height: 400px;
     overflow-y: auto;
+    position: relative;
 }
 
-.comment-item {
+.note-item {
     margin-bottom: 15px;
     padding: 10px;
     background-color: #f8f9fa;
     border-radius: 5px;
     border-left: 3px solid #e74c3c;
+    transition: top 0.3s ease;
 }
 
-.comment-item .comment-ref {
+.note-item .note-ref {
     font-size: 0.8em;
     color: #e74c3c;
     font-weight: bold;
@@ -86,29 +88,20 @@
     padding: 0;
 }
 
-.comment-item .comment-text {
+.note-item .note-text {
     font-size: 0.9em;
     line-height: 1.4;
     color: #2c3e50;
 }
 
-.comment-item .comment-text p {
+.note-item .note-text p {
     margin: 0;
 }
 
-/* Highlight comment when referenced */
-.comment-item.highlighted {
+/* Highlight note when referenced */
+.note-item.highlighted {
     background-color: #fff3cd;
     border-left-color: #ffc107;
-}
-
-/* Dynamic positioning for sidebar notes */
-.comments-list {
-    position: relative;
-}
-
-.comment-item {
-    transition: top 0.3s ease;
 }
 
 /* Ensure sidebar container has proper positioning context */

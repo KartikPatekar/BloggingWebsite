@@ -1,0 +1,5 @@
+{{ $noteId := .Get "id" }}
+{{ $noteText := .Inner }}
+<span class="inline-note-marker" data-note-id="{{ $noteId }}">
+    <sup class="note-ref">[{{ $noteId }}]</sup>
+</span>

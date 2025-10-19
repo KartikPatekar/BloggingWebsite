@@ -41,6 +41,7 @@ home = ["HTML", "RSS", "Algolia"]
   algolia_apiKey = ""
 
   # Sidebar settings
+  author_name = "Kartik Patekar"
   sidebar_about_description = "I am a Economics PhD at Boston University. I am broadly intersted in applied microeconomics. My specific interest is in studying technology adoption in developing countries."
   sidebar_avatar = "general/KP_Photo.png"
 
@@ -68,11 +69,11 @@ home = ["HTML", "RSS", "Algolia"]
 
   [params.social]
   rss = true 
-  email = ""
+  email = "kpatekar[at]bu[dot]edu"
   linkedin = "https://www.linkedin.com/in/kartikpatekar"
-  stackoverflow = "https://stackoverflow.com/users/yourid"
-  github = "https://github.com/yourusername"
-  wechat = "img/wechat-qr-placeholder.png"
+  stackoverflow = ""
+  github = "https://github.com/kartikpatekar"
+  wechat = ""
 
   # Safe external links
   [[params.friend_link]]

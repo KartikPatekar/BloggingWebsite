@@ -17,6 +17,7 @@
                <img src="{{ . | relURL }}" alt="avatar" style="cursor: pointer" />
             </a>
             {{ end }}
+            <h2 style="color: black;">{{ .Site.Params.author_name }}</h2>
             {{ with .Site.Params.sidebar_about_description }}
                 <p>{{ . | safeHTML }}</p>
             {{ end }}
@@ -273,8 +274,8 @@
     </section>
     {{ end }}
 
-    <!-- Comments Section - Only show on post pages -->
+    <!-- Notes Section - Only show on post pages -->
     {{ if eq .Type "post" }}
-    {{ partial "sidebar_comments.html" . }}
+    {{ partial "sidebar_notes.html" . }}
     {{ end }}
 </div>
