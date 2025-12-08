@@ -1,0 +1,25 @@
+{{/* 
+Toggle Section Shortcode
+Usage: {{< toggle title="Section Title" collapsed="true" id="unique-id" class="primary" >}}
+Content here
+{{< /toggle >}}
+*/}}
+
+{{ $title := .Get "title" | default "Toggle Section" }}
+{{ $collapsed := .Get "collapsed" | default "true" }}
+{{ $id := .Get "id" | default (printf "toggle-%d" now.UnixNano) }}
+{{ $class := .Get "class" | default "" }}
+
+{{ $isCollapsed := eq $collapsed "true" }}
+
+<div class="toggle-section {{ if $isCollapsed }}collapsed{{ end }} {{ $class }}" id="{{ $id }}">
+    <div class="toggle-header" role="button" aria-expanded="{{ if $isCollapsed }}false{{ else }}true{{ end }}" aria-controls="{{ $id }}-content">
+        <div class="toggle-title">{{ $title | markdownify }}</div>
+        <button class="toggle-button" aria-label="{{ if $isCollapsed }}Expand{{ else }}Collapse{{ end }} section">
+            {{ if $isCollapsed }}▶{{ else }}▼{{ end }}
+        </button>
+    </div>
+    <div class="toggle-content" id="{{ $id }}-content">
+        {{ .Inner | markdownify }}
+    </div>
+</div>

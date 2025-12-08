@@ -19,7 +19,7 @@ home = ["HTML", "RSS", "Algolia"]
 
 [params]
   header_image = "general/blog_bg.png"
-  SEOTitle = "Your Blog Title | Your Name Blog"
+  SEOTitle = "Thoughts on track | Kartik Patekar"
   description = "Your description here"
   keyword = "your, keywords, here"
   slogan = "My attempts at understanding research papers"
@@ -67,6 +67,10 @@ home = ["HTML", "RSS", "Algolia"]
   about_me = true
   last_posts = true
 
+  # Custom CSS and JavaScript
+  custom_css = ["css/custom.css", "css/toggle.css"]
+  custom_js = ["js/toggle.js"]
+
   [params.social]
   rss = true 
   email = "kpatekar[at]bu[dot]edu"
@@ -96,12 +100,6 @@ home = ["HTML", "RSS", "Algolia"]
   #  [[params.additional_menus]]
   #  title = "Personal W"
   #  href = "/about/"
-
-  # Custom CSS
-  custom_css = ["css/custom.css"]
-  
-  # Custom JavaScript
-  custom_js = ["js/comments.js"]
 
 [outputFormats.Algolia]
 baseName = "algolia"

@@ -37,7 +37,7 @@
     <meta name="keyword"  content="your, keywords, here">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>Home | Your Blog Title | Your Name Blog</title>
+    <title>Home | Thoughts on track | Kartik Patekar</title>
 
     <link rel="canonical" href="/">
 
@@ -57,8 +57,9 @@
 
     
     
+    <link rel="stylesheet" href="/css/katex.css" integrity="sha512-1jSEPj&#43;0P3loEV9Bqx/6P3V6MXp4SGDSuLZwvwOECspSHwdHhQvGd27PJba8AVpwUldurvLTgzN&#43;oX37uNiwOw==" crossorigin="anonymous">
     
-    
+    <link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="/css/toggle.css">
 
     
     <script src="/js/jquery.min.js"></script>
@@ -73,6 +74,8 @@
     <script src="/js/lazysizes.min.js"></script>
 
     
+    
+    <script src="/js/toggle.js"></script>
     
 
 </head>
@@ -203,13 +206,36 @@
 <div data-pagefind-ignore="all">
 
 <div class="post-preview">
+    <a href="http://localhost:1313/post/automation_task/">
+        <h2 class="post-title">
+            Automation, AI, and the Future of Work: Insights from Economics
+        </h2>
+	
+        <div class="post-content-preview">
+	
+            A economic analysis of how AI and automation affect labor markets, featuring a task-based framework by Acemoglu and Restrepo.
+        
+        </div>
+    </a>
+    <p class="post-meta">
+    
+        Posted by Kartik Patekar on Friday, December 5, 2025
+        
+        
+    
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
     <a href="http://localhost:1313/post/iv_traffic_houseprices/">
         <h2 class="post-title">
             IV method and its application to traffic&#39;s impact on house prices
         </h2>
 	
         <h3 class="post-subtitle">
-            A quick introduction to IV regressions in causal analysis and it&#39;s application to calculate the effect of street traffic on housing prices
+            A quick introduction to IV regressions in causal analysis and its application to calculate the effect of street traffic on housing prices
         </h3>
 	
         <div class="post-content-preview">
@@ -324,6 +350,10 @@
             
                
             
+               
+            
+               
+            
         </div>
     </section>
     
@@ -336,6 +366,8 @@
         <hr class="hidden-sm hidden-xs">
         <h5>LAST POSTS</h5>
         <ul>
+        
+            <li><a href="/post/automation_task/">Automation, AI, and the Future of Work: Insights from Economics</a></li>
         
             <li><a href="/post/iv_traffic_houseprices/">IV method and its application to traffic&#39;s impact on house prices</a></li>
         
@@ -359,5 +391,19 @@
 </footer>
 
 
+<script src="/js/katex.js" integrity="sha512-SsCfJSwvttjJN3DgeFwdnHJYdiUV9oLZzH38EU/Z9KNa8OfNbAvy3X7TDLqsUn9KcxnX9Z3sh40v2NdaCe0R/Q==" crossorigin="anonymous"></script>
+    <script src="/js/contrib/auto-render.js" integrity="sha512-4bQtxbbsOaDcbu2OFUKZhKrd0X9F2cyGnIt84nVL3K1XpzeiZBzyEepWhMAb3ZUDylETFkLzgZoV8ZpTLIncow==" crossorigin="anonymous"></script>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false},
+            {left: "\\[", right: "\\]", display: true}
+        ]
+    });
+});
+</script>
 </body>
 </html>

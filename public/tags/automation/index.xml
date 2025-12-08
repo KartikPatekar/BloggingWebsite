@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Automation on Thoughts on track</title>
+    <link>http://localhost:1313/tags/automation/</link>
+    <description>Recent content in Automation on Thoughts on track</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 05 Dec 2025 18:19:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/automation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automation, AI, and the Future of Work: Insights from Economics</title>
+      <link>http://localhost:1313/post/automation_task/</link>
+      <pubDate>Fri, 05 Dec 2025 18:19:00 +0530</pubDate>
+      <guid>http://localhost:1313/post/automation_task/</guid>
+      <description>&lt;p&gt;This post is based on the chapter &lt;strong&gt;Artificial Intelligence, Automation, and Work&lt;/strong&gt; [[1]] by &lt;em&gt;Daron Acemoglu and Pascual Restrepo&lt;/em&gt;, from the Handbook &lt;em&gt;The Economics of Artificial Intelligence&lt;/em&gt;. It also draws on related research by Acemoglu, Restrepo, and coauthors [[References]]. These works offer a framework for analyzing how automation affects labor markets using a task-based approach.&lt;/p&gt;&#xA;&lt;h2 id=&#34;channels-of-automations-impact-on-labor-demand&#34;&gt;Channels of Automation’s Impact on labor demand&lt;/h2&gt;&#xA;&lt;p&gt;There are several key mechanisms through which automation influences labor demand, wages, and labor’s share in the economy. Importantly, the displacement effect stands out as the main negative force, while other mechanisms counterbalance it to varying degrees.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

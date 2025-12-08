@@ -2,70 +2,90 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Position notes in sidebar based on text position
     function positionNotes() {
-        const sidebar = document.querySelector('.sidebar-container');
         const notesList = document.querySelector('.notes-list');
         const noteItems = document.querySelectorAll('.note-item');
+        const postContainer = document.querySelector('.post-container');
         
-        if (!sidebar || !notesList || noteItems.length === 0) return;
+        if (!notesList || !postContainer || noteItems.length === 0) return;
         
-        // Clear any existing positioning
+        // Reset all positioning
         noteItems.forEach(item => {
             item.style.position = '';
             item.style.top = '';
-            item.style.marginBottom = '';
         });
         
-        // Get sidebar position and dimensions
-        const sidebarRect = sidebar.getBoundingClientRect();
-        const sidebarTop = sidebarRect.top + window.scrollY;
+        // Get the post container's top position (where the content starts)
+        const postContainerRect = postContainer.getBoundingClientRect();
+        const postContainerTop = postContainerRect.top + window.scrollY;
+        const postContainerHeight = postContainerRect.height;
         
-        // Position each note
+        // Get the notes list position
+        const notesListRect = notesList.getBoundingClientRect();
+        const notesListTop = notesListRect.top + window.scrollY;
+        
+        // Calculate the offset between the post container and notes list
+        const verticalOffset = notesListTop - postContainerTop;
+        
+        // Calculate positions for each note based on marker positions within post content
+        const notePositions = [];
+        
         noteItems.forEach(item => {
             const noteId = item.dataset.noteId;
             const marker = document.querySelector(`.inline-note-marker[data-note-id="${noteId}"]`);
             
             if (marker) {
+                // Get marker position relative to post container
                 const markerRect = marker.getBoundingClientRect();
-                const markerTop = markerRect.top + window.scrollY;
+                const markerViewportTop = markerRect.top;
+                const postViewportTop = postContainerRect.top;
                 
-                // Calculate desired position in sidebar
-                const desiredTop = markerTop - sidebarTop;
+                // Calculate marker position relative to post container
+                const markerRelativeTop = markerViewportTop - postViewportTop;
                 
-                // Check for overlaps with previously positioned notes
-                let finalTop = desiredTop;
-                const positionedItems = Array.from(noteItems).filter(i => i.style.position === 'absolute');
+                // Calculate desired position in notes list (accounting for the offset)
+                const desiredTop = markerRelativeTop + verticalOffset;
                 
-                positionedItems.forEach(positionedItem => {
-                    const positionedTop = parseInt(positionedItem.style.top) || 0;
-                    const positionedHeight = positionedItem.offsetHeight;
-                    
-                    // If this note would overlap with a positioned note, adjust down
-                    if (finalTop >= positionedTop && finalTop < positionedTop + positionedHeight + 10) {
-                        finalTop = positionedTop + positionedHeight + 10;
-                    }
+                notePositions.push({
+                    item: item,
+                    noteId: noteId,
+                    desiredTop: desiredTop,
+                    height: item.offsetHeight
                 });
-                
-                // Position the note
-                item.style.position = 'absolute';
-                item.style.top = `${Math.max(0, finalTop)}px`;
-                item.style.width = '100%';
-                item.style.marginBottom = '0';
             }
         });
         
-        // Set minimum height for notes list to accommodate positioned items
-        const maxTop = Math.max(...Array.from(noteItems).map(item => {
-            const top = parseInt(item.style.top) || 0;
-            return top + item.offsetHeight;
-        }));
+        // Sort by desired position
+        notePositions.sort((a, b) => a.desiredTop - b.desiredTop);
         
-        if (maxTop > 0) {
-            notesList.style.minHeight = `${maxTop + 20}px`;
+        // Position notes with collision detection and spacing
+        let currentY = 0;
+        notePositions.forEach(notePos => {
+            // Position at desired location or below previous note, whichever is lower
+            let finalTop = Math.max(currentY, notePos.desiredTop);
+            
+            // Ensure note doesn't go above the start of the notes list
+            finalTop = Math.max(0, finalTop);
+            
+            notePos.item.style.position = 'absolute';
+            notePos.item.style.top = `${finalTop}px`;
+            notePos.item.style.left = '0';
+            notePos.item.style.right = '0';
+            notePos.item.style.margin = '0';
+            
+            // Update current Y position for next note (add spacing)
+            currentY = finalTop + notePos.height + 10;
+        });
+        
+        // Set minimum height for notes list to accommodate all positioned items
+        if (notePositions.length > 0) {
+            const lastNote = notePositions[notePositions.length - 1];
+            const totalHeight = parseFloat(lastNote.item.style.top) + lastNote.height + 10;
+            notesList.style.minHeight = `${totalHeight}px`;
         }
     }
     
-    // Initial positioning
-    positionNotes();
+    // Initial positioning after a slight delay to ensure layout is complete
+    setTimeout(positionNotes, 100);
     
     // Reposition on window resize and scroll
     let resizeTimer;
@@ -77,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let scrollTimer;
     window.addEventListener('scroll', function() {
         clearTimeout(scrollTimer);
-        scrollTimer = setTimeout(positionNotes, 100);
+        scrollTimer = setTimeout(positionNotes, 50);
     });
     
     // Add click handlers to inline note references
@@ -98,6 +118,24 @@ document.addEventListener('DOMContentLoaded', function() {
             if (targetNote) {
                 targetNote.classList.add('highlighted');
                 
+                // Scroll into view if needed
+                const notesList = document.querySelector('.notes-list');
+                if (notesList) {
+                    const noteTop = targetNote.offsetTop;
+                    const noteHeight = targetNote.offsetHeight;
+                    const listScrollTop = notesList.scrollTop;
+                    const listHeight = notesList.offsetHeight;
+                    
+                    if (noteTop < listScrollTop) {
+                        notesList.scrollTop = noteTop;
+                    } else if (noteTop + noteHeight > listScrollTop + listHeight) {
+                        notesList.scrollTop = noteTop + noteHeight - listHeight;
+                    }
+                }
+            }
+        });
+    });
+});
                 // Remove highlight after 3 seconds
                 setTimeout(() => {
                     targetNote.classList.remove('highlighted');

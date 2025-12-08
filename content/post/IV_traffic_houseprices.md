@@ -1,6 +1,6 @@
 ---
 title: "IV method and its application to traffic's impact on house prices"
-subtitle: "A quick introduction to IV regressions in causal analysis and it's application to calculate the effect of street traffic on housing prices"
+subtitle: "A quick introduction to IV regressions in causal analysis and its application to calculate the effect of street traffic on housing prices"
 date: 2025-10-17T18:19:00+05:30
 author: "Kartik Patekar"
 tags: ["empirics", "externality"]

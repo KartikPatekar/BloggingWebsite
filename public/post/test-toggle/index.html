@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="Thoughts on track">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="http://localhost:1313//general/blog_bg.png">
+    <meta property="twitter:image" content="http://localhost:1313//general/blog_bg.png" />
+    
+
+    
+    <meta name="title" content="Test Toggle Sections" />
+    <meta property="og:title" content="Test Toggle Sections" />
+    <meta property="twitter:title" content="Test Toggle Sections" />
+    
+
+    
+    <meta name="description" content="Your description here">
+    <meta property="og:description" content="Your description here" />
+    <meta property="twitter:description" content="Your description here" />
+    
+
+    <meta property="og:url" content="http://localhost:1313/post/test-toggle/" />
+
+    
+    <meta property="twitter:card" content="A test post to demonstrate toggle sections functionality" />
+    
+    
+
+    <meta name="keyword"  content="your, keywords, here">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>Test Toggle Sections | Thoughts on track | Kartik Patekar</title>
+
+    <link rel="canonical" href="/post/test-toggle/">
+
+    
+
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.min.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="/css/toggle.css">
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+    <script src="/js/toggle.js"></script>
+    
+
+</head>
+
+
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_ID"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'YOUR_GA_ID');
+        }
+      </script>
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Thoughts on track</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">All Posts</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/economics/">economics</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/test/">test</a>
+                        </li>
+                        
+                    
+                    
+		    
+                        <li><a href="https://www.kartikpatekar.com/">MyWebsite</a></li>
+                    
+		            <li>
+                        <a href="/search"><i class="fa fa-search"></i></a>
+		           </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+<header class="intro-header" style="background-image: url('/general/blog_bg.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>Test Toggle Sections</h1>
+                    <span class="subheading"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+            
+            <div class="
+            col-lg-8 col-lg-offset-1
+            col-md-8 col-md-offset-1
+            col-sm-12
+            col-xs-12
+            post-container">
+            
+                <h1 id="testing-toggle-sections">Testing Toggle Sections</h1>
+<p>This post demonstrates the new toggle sections feature that can be added to blog posts.</p>
+<h2 id="basic-toggle-section">Basic Toggle Section</h2>
+<p>Here&rsquo;s a basic toggle section:</p>
+
+
+
+
+
+
+
+
+
+<div class="toggle-section collapsed " id="toggle-1765070294388798100">
+    <div class="toggle-header" role="button" aria-expanded="false" aria-controls="toggle-1765070294388798100-content">
+        <div class="toggle-title">Click to expand this section</div>
+        <button class="toggle-button" aria-label="Expand section">
+            ▶
+        </button>
+    </div>
+    <div class="toggle-content" id="toggle-1765070294388798100-content">
+        <p>This content is hidden by default and can be toggled open or closed.</p>
+<p>You can include <strong>markdown</strong> content here:</p>
+<ul>
+<li>List items</li>
+<li><code>Code snippets</code></li>
+<li><strong>Bold text</strong></li>
+<li><em>Italic text</em></li>
+</ul>
+<blockquote>
+<p>Blockquotes work too!</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">hello_world</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Hello from a toggle section!&#34;</span>)
+</span></span></code></pre></div>
+    </div>
+</div>
+
+<h2 id="collapsed-by-default">Collapsed by Default</h2>
+<p>You can make a section collapsed by default using the <code>collapsed</code> parameter:</p>
+
+
+
+
+
+
+
+
+
+<div class="toggle-section collapsed " id="toggle-1765070294389933900">
+    <div class="toggle-header" role="button" aria-expanded="false" aria-controls="toggle-1765070294389933900-content">
+        <div class="toggle-title">This section starts collapsed</div>
+        <button class="toggle-button" aria-label="Expand section">
+            ▶
+        </button>
+    </div>
+    <div class="toggle-content" id="toggle-1765070294389933900-content">
+        <p>This content is hidden when the page loads. Click the toggle button or header to expand it.</p>
+<p>You can put any content here, including images, code blocks, tables, etc.</p>
+
+    </div>
+</div>
+
+<h2 id="multiple-toggle-sections">Multiple Toggle Sections</h2>
+
+
+
+
+
+
+
+
+
+<div class="toggle-section collapsed " id="toggle-1765070294389933900">
+    <div class="toggle-header" role="button" aria-expanded="false" aria-controls="toggle-1765070294389933900-content">
+        <div class="toggle-title">First Section</div>
+        <button class="toggle-button" aria-label="Expand section">
+            ▶
+        </button>
+    </div>
+    <div class="toggle-content" id="toggle-1765070294389933900-content">
+        Content for first section.
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="toggle-section collapsed " id="toggle-1765070294390517000">
+    <div class="toggle-header" role="button" aria-expanded="false" aria-controls="toggle-1765070294390517000-content">
+        <div class="toggle-title">Second Section</div>
+        <button class="toggle-button" aria-label="Expand section">
+            ▶
+        </button>
+    </div>
+    <div class="toggle-content" id="toggle-1765070294390517000-content">
+        This one starts collapsed.
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="toggle-section collapsed " id="toggle-1765070294390517000">
+    <div class="toggle-header" role="button" aria-expanded="false" aria-controls="toggle-1765070294390517000-content">
+        <div class="toggle-title">Third Section</div>
+        <button class="toggle-button" aria-label="Expand section">
+            ▶
+        </button>
+    </div>
+    <div class="toggle-content" id="toggle-1765070294390517000-content">
+        Another expanded section.
+    </div>
+</div>
+
+<h2 id="with-custom-id">With Custom ID</h2>
+<p>You can specify a custom ID for JavaScript manipulation:</p>
+
+
+
+
+
+
+
+
+
+<div class="toggle-section collapsed " id="custom-section">
+    <div class="toggle-header" role="button" aria-expanded="false" aria-controls="custom-section-content">
+        <div class="toggle-title">Section with Custom ID</div>
+        <button class="toggle-button" aria-label="Expand section">
+            ▶
+        </button>
+    </div>
+    <div class="toggle-content" id="custom-section-content">
+        This section has ID &ldquo;custom-section&rdquo;. You can use <code>window.toggleSection('custom-section')</code> in the browser console to toggle it programmatically.
+    </div>
+</div>
+
+<h2 id="styled-sections">Styled Sections</h2>
+<p>You can add styling classes:</p>
+
+
+
+
+
+
+
+
+
+<div class="toggle-section collapsed primary" id="toggle-1765070294391184000">
+    <div class="toggle-header" role="button" aria-expanded="false" aria-controls="toggle-1765070294391184000-content">
+        <div class="toggle-title">Primary Section</div>
+        <button class="toggle-button" aria-label="Expand section">
+            ▶
+        </button>
+    </div>
+    <div class="toggle-content" id="toggle-1765070294391184000-content">
+        This has a blue left border.
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="toggle-section collapsed success" id="toggle-1765070294391184000">
+    <div class="toggle-header" role="button" aria-expanded="false" aria-controls="toggle-1765070294391184000-content">
+        <div class="toggle-title">Success Section</div>
+        <button class="toggle-button" aria-label="Expand section">
+            ▶
+        </button>
+    </div>
+    <div class="toggle-content" id="toggle-1765070294391184000-content">
+        This has a green left border.
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="toggle-section collapsed warning" id="toggle-1765070294391717300">
+    <div class="toggle-header" role="button" aria-expanded="false" aria-controls="toggle-1765070294391717300-content">
+        <div class="toggle-title">Warning Section</div>
+        <button class="toggle-button" aria-label="Expand section">
+            ▶
+        </button>
+    </div>
+    <div class="toggle-content" id="toggle-1765070294391717300-content">
+        This has a yellow left border.
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="toggle-section collapsed danger" id="toggle-1765070294391717300">
+    <div class="toggle-header" role="button" aria-expanded="false" aria-controls="toggle-1765070294391717300-content">
+        <div class="toggle-title">Danger Section</div>
+        <button class="toggle-button" aria-label="Expand section">
+            ▶
+        </button>
+    </div>
+    <div class="toggle-content" id="toggle-1765070294391717300-content">
+        This has a red left border.
+    </div>
+</div>
+
+<h2 id="nested-toggle-sections">Nested Toggle Sections</h2>
+
+
+
+
+
+
+
+
+
+<div class="toggle-section collapsed " id="toggle-1765070294392270800">
+    <div class="toggle-header" role="button" aria-expanded="false" aria-controls="toggle-1765070294392270800-content">
+        <div class="toggle-title">Parent Section</div>
+        <button class="toggle-button" aria-label="Expand section">
+            ▶
+        </button>
+    </div>
+    <div class="toggle-content" id="toggle-1765070294392270800-content">
+        <p>This is the parent section content.</p>
+<!-- raw HTML omitted -->
+<p>More parent content after the nested section.</p>
+
+    </div>
+</div>
+
+<h2 id="javascript-api">JavaScript API</h2>
+<p>The toggle functionality provides a JavaScript API:</p>
+<ol>
+<li><code>window.toggleSection(sectionId)</code> - Toggle a specific section by ID</li>
+<li><code>window.toggleAllSections('expand')</code> - Expand all sections</li>
+<li><code>window.toggleAllSections('collapse')</code> - Collapse all sections</li>
+<li><code>window.toggleAllSections()</code> - Toggle all sections individually</li>
+</ol>
+<p>Try running these in your browser console!</p>
+<h2 id="usage-in-markdown">Usage in Markdown</h2>
+<p>To use toggle sections in your markdown files:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>
+
+
+
+
+
+
+
+
+<div class="toggle-section collapsed primary" id="unique-id">
+    <div class="toggle-header" role="button" aria-expanded="false" aria-controls="unique-id-content">
+        <div class="toggle-title">Section Title</div>
+        <button class="toggle-button" aria-label="Expand section">
+            ▶
+        </button>
+    </div>
+    <div class="toggle-content" id="unique-id-content">
+        Your content here, with <strong>markdown</strong> support.
+    </div>
+</div>
+
+</span></span></code></pre></div><p>Parameters:</p>
+<ul>
+<li><code>title</code>: The header text (supports markdown)</li>
+<li><code>collapsed</code>: &ldquo;true&rdquo; to start collapsed, &ldquo;false&rdquo; (default) to start expanded</li>
+<li><code>id</code>: Optional unique ID for JavaScript access</li>
+<li><code>class</code>: Optional CSS class for styling (primary, success, warning, danger, info)</li>
+</ul>
+
+            
+             
+            
+
+
+
+
+            
+            </div>
+            
+
+<div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+</div>
+
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    
+</footer>
+
+
+</body>
+</html>

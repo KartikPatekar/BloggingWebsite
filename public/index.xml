@@ -6,8 +6,15 @@
     <description>Recent content in Home on Thoughts on track</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Oct 2025 18:19:00 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 05 Dec 2025 18:19:00 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automation, AI, and the Future of Work: Insights from Economics</title>
+      <link>http://localhost:1313/post/automation_task/</link>
+      <pubDate>Fri, 05 Dec 2025 18:19:00 +0530</pubDate>
+      <guid>http://localhost:1313/post/automation_task/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;As artificial intelligence and robotics accelerate technological change, a critical question emerges: What does automation mean for workers and wage inequality? This post explores this question through the lens of modern economic theory, drawing on groundbreaking research by Daron Acemoglu and Pascual Restrepo [[References]].&lt;/p&gt;&#xA;&lt;p&gt;While automation has historically led to job creation and rising living standards, recent developments raise concerns about whether this pattern will persist. Using a &lt;strong&gt;task-based framework&lt;/strong&gt;, we can decompose automation&amp;rsquo;s effects into distinct channels: some harmful to workers (displacement), others beneficial (productivity and task creation). Understanding these mechanisms is essential as we attempt to figure out how the AI revolution will reshape the labor market.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>IV method and its application to traffic&#39;s impact on house prices</title>
       <link>http://localhost:1313/post/iv_traffic_houseprices/</link>
