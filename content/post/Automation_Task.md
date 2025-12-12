@@ -14,7 +14,7 @@ notes:
     4: This framework assumes that the total measure of tasks do not change. Therefore creation of new labor intensive tasks leads to phasing out of some machine intensive tasks with low labor productivity to machine productivity. However, getting rid of this assumption does not have any meaningful impact on interpretation of the model.
 ---
 
-## Introduction
+# Introduction
 
 As artificial intelligence and automation drive rapid technological change, a central question arises: How will these forces affect workers’ employment, wages, and economic inequality? In this post, I summarize the recent research on this topic by Professors Daron Acemoglu, Pascal Restrepo, and their co-authors [[1,2,3,4]].
 
@@ -50,6 +50,7 @@ While these four positive forces tend to counteract the displacement effect of A
 
 This mismatch between worker skill growth and technology growth can also limit the productivity gains from new technologies. If certain skills are necessary to operate new technologies but the education system is not able to equip sufficient workers with these skills, then the technology growth will outpace the productivity growth. This mismatch would result in uneven distribution of gains from automation, thus exacerbating inequality. 
 
+--------
 # Modelling using Task-based framework
 
 In this section, I present a formal mathematical model incorporating the key forces described above. This model, developed by Acemoglu and Restrepo, presents a task-based framework for understanding the impact of automation on employment.
@@ -69,7 +70,7 @@ With this description, we can better define the ordering. Tasks are ordered in i
 
 The total supply of labor and capital is given by $L$ and $K$ respectively, and these are assumed to be fixed and inelastic {{< note id="2" />}} {{< note id="3" />}}. I will try to present the extension of the framework with elastic labor supply later. 
 
-### Types of Technological Change
+## Types of Technological Change
 
 As discussed earlier, there are four main channels through which technological progress affects labor markets. Each channel reflects a distinct way that technological advances improve productivity. Because these types of technological growth differ, they have varying impacts on labor demand, wages, and the labor share of income. Let’s explore these forms of technological change and see how they are represented in the model.
 
@@ -78,7 +79,7 @@ As discussed earlier, there are four main channels through which technological p
 3. **Automation at intensive margin (Deepening of automation)**: This reflects increase in productivity of machines in tasks that were already automated and this growth is captured by an increase in $\gamma_M(x)$ in the framework. 
 4. **Creation of new tasks**: Automation leads to creation of new tasks pertaining to manufacturing, maintenance, and management of machines. This is captured by an increase in $I$ in the framework. 
 
-### Equilibrium
+## Equilibrium
 
 Let the equilibrium wage rate be $W$ and the rental cost of machines be $R$. The following simplifying assumption help with the further analysis
 - *Assumption A1.1*: $\frac{W}{R} > \frac{\gamma_L(I)}{\gamma_M(I)}$: This ensures that any task that can be automated ($x \in [N-1, I]$) is automated as machines deliver higher productivity per unit cost.
@@ -230,6 +231,7 @@ It is important to note that while the mathematical simplifications used in this
 
 In the model above, labor supply was assumed to be perfectly inelastic, so any change in labor demand manifests as wage changes. In reality, however, equilibrium employment depends directly on labor demand. Therefore, new automation technologies can lead to higher or lower unemployment rates through changes in task content and the creation of new labor-intensive tasks.
 
+--------
 # Inefficiencies
 
 Although above discussion looks at how displacement of workers due to AI and automation is countered by positive effects, it relies on the assumption that all these forces act simultaneously and efficiently. However, the real world contain several efficiencies which limits response of labor markets to positive forces and hinders productivity.
@@ -319,6 +321,7 @@ $$
 {{< /toggle >}}
 
 
+----
 
 # References
 1. Daron Acemoglu and Pascual Restrepo, "Artificial Intelligence, Automation and Work," NBER Working Paper 24196 (2018), https://doi.org/10.3386/w24196.

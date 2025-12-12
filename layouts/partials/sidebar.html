@@ -276,6 +276,17 @@
 
     <!-- Notes Section - Only show on post pages -->
     {{ if eq .Type "post" }}
+    <!-- Table of Contents (show on post pages when available) -->
+    {{ if ne .TableOfContents "" }}
+    <section class="sidebar-toc">
+        <hr class="hidden-sm hidden-xs">
+        <h5>Contents</h5>
+        <div class="toc-body">
+            {{ .TableOfContents | safeHTML }}
+        </div>
+    </section>
+    {{ end }}
+
     {{ partial "sidebar_notes.html" . }}
     {{ end }}
 </div>

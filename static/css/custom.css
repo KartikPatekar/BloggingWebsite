@@ -108,3 +108,54 @@
 .sidebar-container {
     position: relative;
 }
+
+/* Sidebar Table of Contents */
+.sidebar-toc {
+    margin-bottom: 20px;
+}
+
+.sidebar-toc h5 {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.toc-body {
+    font-size: 0.95em;
+    line-height: 1.4;
+    color: #2c3e50;
+}
+
+.toc-body ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.toc-body li {
+    margin: 6px 0;
+}
+
+.toc-body a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.toc-body a:hover {
+    text-decoration: underline;
+}
+
+/* Horizontal Rule Styling */
+hr {
+    border: 0;
+    border-top: 1px solid #000000; /* Dark gray to match text color */
+    margin: 1.5em 0; /* Standard margin for separation */
+    width: 100%; /* Full width */
+}
+
+/* Optional: Style for hr.small if used in the theme */
+hr.small {
+    max-width: 100px;
+    border-top: 1px solid #000000; /* Same color as regular hr */
+    margin: 1em auto; /* Center it with auto margins */
+}
