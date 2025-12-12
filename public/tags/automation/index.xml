@@ -1,19 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Automation on Thoughts on track</title>
-    <link>http://localhost:1313/tags/automation/</link>
-    <description>Recent content in Automation on Thoughts on track</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 05 Dec 2025 18:19:00 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/automation/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Automation, AI, and the Future of Work: Insights from Economics</title>
-      <link>http://localhost:1313/post/automation_task/</link>
-      <pubDate>Fri, 05 Dec 2025 18:19:00 +0530</pubDate>
-      <guid>http://localhost:1313/post/automation_task/</guid>
-      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;&#xA;&lt;p&gt;As artificial intelligence and automation drive rapid technological change, a central question arises: How will these forces affect workers’ employment, wages, and economic inequality? In this post, I summarize the recent research on this topic by Professors Daron Acemoglu, Pascal Restrepo, and their co-authors [[1,2,3,4]].&lt;/p&gt;&#xA;&lt;p&gt;Historically, automation has contributed to job creation and improvements in living standards. However, recent trends have triggered growing concerns about whether this beneficial pattern will continue. By employing a task-based framework, we can better understand automation’s impact by breaking it down into distinct channels—some detrimental to workers (such as job displacement), and others beneficial (including increased productivity and the creation of new tasks). Grasping these mechanisms is vital for evaluating how the AI revolution might reshape the labor market.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Automation on Thoughts on track</title><link>https://blog.kartikpatekar.com/tags/automation/</link><description>Recent content in Automation on Thoughts on track</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 05 Dec 2025 18:19:00 +0530</lastBuildDate><atom:link href="https://blog.kartikpatekar.com/tags/automation/index.xml" rel="self" type="application/rss+xml"/><item><title>Automation, AI, and the Future of Work: Insights from Economics</title><link>https://blog.kartikpatekar.com/post/automation_task/</link><pubDate>Fri, 05 Dec 2025 18:19:00 +0530</pubDate><guid>https://blog.kartikpatekar.com/post/automation_task/</guid><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;As artificial intelligence and automation drive rapid technological change, a central question arises: How will these forces affect workers’ employment, wages, and economic inequality? In this post, I summarize the recent research on this topic by Professors Daron Acemoglu, Pascal Restrepo, and their co-authors [[1,2,3,4]].&lt;/p&gt;
+&lt;p&gt;Historically, automation has contributed to job creation and improvements in living standards. However, recent trends have triggered growing concerns about whether this beneficial pattern will continue. By employing a task-based framework, we can better understand automation’s impact by breaking it down into distinct channels—some detrimental to workers (such as job displacement), and others beneficial (including increased productivity and the creation of new tasks). Grasping these mechanisms is vital for evaluating how the AI revolution might reshape the labor market.&lt;/p&gt;</description></item></channel></rss>

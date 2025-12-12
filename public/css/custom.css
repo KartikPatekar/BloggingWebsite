@@ -133,7 +133,28 @@
 }
 
 .toc-body li {
-    margin: 6px 0;
+    margin: 4px 0;
+}
+
+/* Nested list indentation */
+.toc-body ul ul {
+    padding-left: 18px;
+    margin-top: 4px;
+}
+
+.toc-body ul ul li {
+    margin: 3px 0;
+    font-size: 0.9em;
+}
+
+.toc-body ul ul li::before {
+    content: "- ";
+    color: #6c757d;
+    margin-right: 4px;
+}
+
+.toc-body ul ul ul li {
+    font-size: 0.85em;
 }
 
 .toc-body a {
@@ -143,6 +164,7 @@
 
 .toc-body a:hover {
     text-decoration: underline;
+    color: #0056b3;
 }
 
 /* Horizontal Rule Styling */
