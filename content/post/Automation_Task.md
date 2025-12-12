@@ -16,11 +16,11 @@ notes:
 
 ## Introduction
 
-As artificial intelligence and robotics accelerate technological change, a critical question emerges: What does automation mean for workers and wage inequality? This post explores this question through the lens of modern economic theory, drawing on groundbreaking research by Daron Acemoglu and Pascual Restrepo [[References]].
+As artificial intelligence and automation drive rapid technological change, a central question arises: How will these forces affect workers’ employment, wages, and economic inequality? In this post, I summarize the recent research on this topic by Professors Daron Acemoglu, Pascal Restrepo, and their co-authors [[1,2,3,4]].
 
-While automation has historically led to job creation and rising living standards, recent developments raise concerns about whether this pattern will persist. Using a **task-based framework**, we can decompose automation's effects into distinct channels: some harmful to workers (displacement), others beneficial (productivity and task creation). Understanding these mechanisms is essential as we attempt to figure out how the AI revolution will reshape the labor market.
+Historically, automation has contributed to job creation and improvements in living standards. However, recent trends have triggered growing concerns about whether this beneficial pattern will continue. By employing a task-based framework, we can better understand automation’s impact by breaking it down into distinct channels—some detrimental to workers (such as job displacement), and others beneficial (including increased productivity and the creation of new tasks). Grasping these mechanisms is vital for evaluating how the AI revolution might reshape the labor market.
 
-This post synthesizes insights from the chapter **Artificial Intelligence, Automation, and Work** by *Daron Acemoglu and Pascual Restrepo* from *The Economics of Artificial Intelligence* handbook, providing both intuitive explanations and formal mathematical models to illuminate how different types of technological progress shape labor market outcomes.
+To analyze these effects, I will present an intuitive explanation of these key economic models and then formalize them, highlighting how different kinds of technological progress can influence labor market outcomes.
 
 ## Channels of Automation's Impact on Labor Demand
 
@@ -230,6 +230,99 @@ It is important to note that while the mathematical simplifications used in this
 
 In the model above, labor supply was assumed to be perfectly inelastic, so any change in labor demand manifests as wage changes. In reality, however, equilibrium employment depends directly on labor demand. Therefore, new automation technologies can lead to higher or lower unemployment rates through changes in task content and the creation of new labor-intensive tasks.
 
+# Inefficiencies
+
+Although above discussion looks at how displacement of workers due to AI and automation is countered by positive effects, it relies on the assumption that all these forces act simultaneously and efficiently. However, the real world contain several efficiencies which limits response of labor markets to positive forces and hinders productivity.
+
+## Challenge 1: Mistmatch between Technology and Skills
+
+Through reinstatement effect, technology advancement leads to creation of new tasks, and these tasks often require workers to possess certain skills. If the labor force current skill level is insufficient to match requirements of these new tasks, workers would need to upskill or reskill. This process requires time and efforts. Therefore, this leads to a lag between displacement effect and reinstatement effect.
+
+To understand this, let us look at a simple model of labor market with two types of workers - High skilled $(H)$ and Low skilled $(L)$ (denote high skilled labor supply by $H$ and low-skilled labor supply by $L$). Workers with low-skill can only perform some of the labor intensive tasks, specifically tasks below a threshold $S \in (I, N)$. High skilled workers can perform all tasks. Denote wages of these workers by $W_H$ and $W_L$. If there is a an increase in technology frontier $I$, the wage inequality increases according to 
+
+$$ \frac{d \ln W_H / W_L}{dI} = \frac{1}{S - I} > 0$$
+
+As technology frontier advances, more tasks performed by low-skilled workers are automated. As a result, the inequality between high and low skilled workers increase (see mathematical details below). The rate of growth of income disparity is inversely proportional to the number of jobs that low-skilled workers can take up. If the skill mismatch is high ($S$ close to $I$), then technology advancement will lead to a large wage inequality. This is because the displaced workers with limited skills have very few jobs left when technology frontier shifts.
+
+In addition to increase in wage inequality, the productvity gains are also lower when there is a skill mismatch ($S$ close to $I$). The productivity gains from advancement in technology frontier is given by
+
+$$ \frac{d \ln Y}{dI} = \ln \left( \frac{W_L}{\gamma_L(I)} \right) - \ln \left( \frac{R}{\gamma_M(I)} \right) > 0 $$
+$$ \frac{d \ln Y}{dI} = \ln \left( \frac{S-I}{I-N+1}\right) + \ln \left( \frac{K}{L}\right) - \ln \left( \frac{\gamma_M(I)}{\gamma_L(I)}\right) $$
+
+
+
+The takeaway from the above expression is that worse mistmatch (small $S-I$) leads to a lower productivity effect of technological progress. This is because the workers cannot be allocated effectively, resulting in lower overall productivity increase. Additionally, the productivty effect of task creation is also smaller  
+
+$$\frac{d \ln Y}{dN} = \ln \left( \frac{R}{\gamma_M(N - I)} \right) - \ln \left( \frac{W_H}{\gamma_H(N)} \right) > 0 $$
+$$\frac{d \ln Y}{dN} =  \ln \left( \frac{I-N+1}{N-S}\right) + \ln \left( \frac{H}{K}\right) - \ln \left( \frac{\gamma_M(N-I)}{\gamma_H(N)}\right)  $$
+
+Higher productivity mismatch means larger $N-S$, and therefore smaller productivity gains. This is because since unskilled workers cannot take up new tasks, which impedes productivity gains. Therefore, to avoid inequality rise and maximize productivity gains, we need to upskill labor force as technology advances.
+
+{{< toggle title="Mathematical derivation" collapsed="true" >}}
+
+Assume productivity of both types of workers is still $\gamma_L(x) = \gamma_H(x)$ if they can perform task $x$. Lets further assume that $W_H > W_L$ (which will happen if porportion of low-skilled workers is larger than the proportion of low-skill labor intensive jobs). Then, the workers will sort themselves, with low-skilled workers performing all tasks between $x \in (I, S)$ while high-skilled workers perform all of more complex tasks $x \in (S, N)$. The wages are given by
+
+$$W_H = \frac{Y}{H} (N - S) \quad \text{and} \quad W_L = \frac{Y}{L} (S - I) $$
+
+which leads to the inequality measure as indicated above. To understand effect of production, note that the aggregate production can be expressed as 
+
+$$
+\begin{align*}
+    \ln Y &= \int_{N-1}^I \ln \gamma_M(x) dx + \int_{I}^{N} \ln \gamma_L(x) dx \\
+            &+ (I-N+1) \ln \left( \frac{K}{I-N+1}\right) + (S-I) \ln\left(  \frac{L}{S-I}\right) + (N-S) \ln \left( \frac{H}{N-S}\right) 
+\end{align*}
+$$
+
+To get the productivity effect mentioned above, it is sufficient to take the derivative of the above equaion and substitute wage shares and capital shares $R K =  Y(I-N+1)$, $W_L L = Y(S-I)$ and $W_H H = Y(N-S)$. 
+
+{{< /toggle >}}
+
+
+
+
+## Challenge 2: Socially Excessive Automation
+
+An important observation is that despite significant advances in technology, the overall productivity growth in the economy has been low. To explain this disparity, Acemogly and Restrepo [[2]] argue that due to distortions that increases cost of labor as compared to machines, firms tend to substitute labor for machines more than what is socially desirable, leading to excessibe automation. This distortions could arise due to government policies promoting automation (direct subsidies to firms, capital depreciation allowances, tax credit for debt-financed investment in capital) or due to indirect policies such as higher tax cost of employing workers for production as compared to capital. 
+
+To see this in the above framework, let us endogenise the supply of machines instead of assuming fixed capital supply $K$. Firms can rent the machines at a fixed rental rate $R$, but they recieve a rental subsidy of $\tau > 0$. This makes the effective rental rate to be $R(1-\tau)$. Let the total count of machines used in production be $K$ (now endogenous). Define GDP as the different between value of final goods and cost of intermediate goods (production of machines)
+
+$$ GDP = Y - RK$$
+
+The effect of automattion is given by 
+
+$$ \frac{dGDP}{dI} =
+\underbrace{
+    \ln\left( \frac{W}{\gamma_L(I)} \right)
+    - \ln\left( \frac{R(1-\tau)}{\gamma_M(I)} \right)
+}_{\text{Productivity effect} > 0} - 
+\underbrace{
+    R \tau \frac{dK}{dI}
+}_{\text{Excessive automation} < 0} $$
+
+The distortion due to subisidies results in firms substituting capital for labor more than what is socially optimal, and therefore the production of machines is higher than socially optimal level. This excessive automation has a negative impact on GDP or aggregate gains from automation.
+
+
+{{< toggle title="Mathematical derivation" collapsed="true" >}}
+
+The assumption *A1* is modified to be
+$$ \frac{\gamma_L(N)}{\gamma_M(N-1)} > \frac{W}{R(1-\tau)} > \frac{\gamma_L(I)}{\gamma_M(I)} $$
+
+The increase in GDP due to advancement of technology frontier is 
+$$ 
+\begin{align*}
+    \frac{d GDP }{d I} &= \frac{\partial Y }{\partial I} + \frac{\partial Y }{\partial K} \frac{d K }{d I} - R \frac{d K }{d I}\\
+    &=  \left.\frac{d Y }{d I}\right|_K + R(1-\tau)\frac{d K }{d I} - R \frac{d K }{d I} \\
+    &= \text{Productivtiy effect} - \text{Excessive Automation}
+\end{align*}
+$$
+
+{{< /toggle >}}
+
+
 
 # References
-1. https://pascual.scripts.mit.edu/research/ai_nber_chapter/ai_nber_chapter.pdf
+1. Daron Acemoglu and Pascual Restrepo, "Artificial Intelligence, Automation and Work," NBER Working Paper 24196 (2018), https://doi.org/10.3386/w24196.
+2. Acemoglu, Daron, and Pascual Restrepo. 2018. "The Race between Man and Machine: Implications of Technology for Growth, Factor Shares, and Employment." American Economic Review 108 (6): 1488–1542. 
+3. Acemoglu, Daron, and Pascual Restrepo. 2020. "Robots and Jobs: Evidence from US Labor Markets." Journal of Political Economy, 128 (6): 2188-2244. https://doi.org/10.1086/705716.
+4. Acemoglu, Daron, and Pascual Restrepo. 2018. "Low-Skill and High-Skill Automation." Journal of Human Capital, 12 (2): 204–232. https://doi.org/10.1086/697242.
+5. Daron Acemoglu, Andrea Manera, and Pascual Restrepo, "Does the US Tax Code Favor Automation?," NBER Working Paper 27052 (2020), https://doi.org/10.3386/w27052.
