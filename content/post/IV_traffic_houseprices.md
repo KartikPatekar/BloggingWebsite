@@ -1,5 +1,5 @@
 ---
-title: "IV method and shift share instruments"
+title: "IV method and Shift-Share instruments"
 subtitle: "A quick introduction to IV regressions in causal analysis and Shift Share instruments"
 date: 2025-10-17T18:19:00+05:30
 author: "Kartik Patekar"
@@ -13,15 +13,15 @@ notes:
   3: "The causal effect estimate obtained from IV method is the average treatment effect on compilers (LATE)."
 ---
 
-# Instrumental Variable approach for Casual Inference
+# Instrumental Variable approach for Causal Inference
 
 If we believe that a variable $X$ causes (or affects) another variable $Y$, we are often interested in studying how much the value of $Y$ changes if we make a small $\delta x$ change in $X$. For example, how much do people dislike traffic on their street can be measured by decrease in house prices in response to increase in street traffic. The statistical technique most commonly used to answer causal questions is the linear regression {{< note id="1" />}}
 $$ Y = \beta X + C\gamma + \epsilon $$
-where $C$ is the matrix of control variables and we assume that standard OLS assumption holds. However, even when $X$ and $Y$ are causally related, the estimate of $\beta$ is unbiased only if $X$ and $\epsilon$ are independent conditioned on $C$. This is often not the case in practice. In our example, he construction of a new housing development in a neighborhood may increase traffic prices while lowering the house prices, but this decrease in prices would not be the effect of increased traffic. Similarly, if a shopping complex is built in a neighborhood, it may increase traffic and house prices without this being a causal effect. Instrumental Variable estimation addresses this endogeneity problem by using an instrument $Z$ that affects $Y$ only through $X$. By restricting to studying variation in $Y$ due to variation in $X$ that originates through $Z$, it is possible to obtain unbiased estimates of $\beta$.
+where $C$ is the matrix of control variables and we assume that standard OLS assumption holds. However, even when $X$ and $Y$ are causally related, the estimate of $\beta$ is unbiased only if $X$ and $\epsilon$ are independent conditioned on $C$. This is often not the case in practice. In our example, the construction of a new housing development in a neighborhood may increase traffic while lowering the house prices, but this decrease in prices would not be the effect of increased traffic. Similarly, if a shopping complex is built in a neighborhood, it may increase traffic and house prices without this being a causal effect. Instrumental Variable estimation addresses this endogeneity problem by using an instrument $Z$ that affects $Y$ only through $X$. By restricting to studying variation in $Y$ due to variation in $X$ that originates through $Z$, it is possible to obtain unbiased estimates of $\beta$.
 
 ![fig1](/1_IV_traffic_houseprices/IV_expl.png "Figure 1: IV estimate in presence of omitted variable")
 
-Let us build an intuititve understanding of omitted variable bias in OLS and how IV estimates remove the bias. Consider the causal relation descrbed in figure 1a. $A$ is an omitted variable which confounds $X$ and $Y$. For concreteness, let's assume that the true data generating process is given by 
+Let us build an intuitive understanding of omitted variable bias in OLS and how IV estimates remove the bias. Consider the causal relation described in figure 1a. $A$ is an omitted variable which confounds $X$ and $Y$. For concreteness, let's assume that the true data generating process is given by 
 $$
 \begin{align*}
  X &= A+Z + \eta\\
@@ -29,7 +29,7 @@ $$
 \end{align*}
 $$
 
-Assume that $A$ and $Z$ are inpendent, have mean $0$ and variance $1$. The length of line segments in Figure 1b represent the variation in the variables. Without accounting for the omitted variable, the standard OLS $ Y = \beta X + \epsilon $ gives the incorrect causal estimate
+Assume that $A$ and $Z$ are independent, have mean $0$ and variance $1$. The length of line segments in Figure 1b represent the variation in the variables. Without accounting for the omitted variable, the standard OLS $ Y = \beta X + \epsilon $ gives the incorrect causal estimate
 $$ \hat \beta_{OLS} = \frac{Cov(X,Y)}{Var(X)} = 3$$
 
 In the IV framework, we use an instrument $Z$ that affects $Y$ only through $X$ (exogeneity requirement). The IV regression proceeds in 2 stages {{< note id="2" />}}
@@ -40,7 +40,7 @@ $$
 \end{align*}
 $$
 
-In the stage 1, we isolate the variation in $X$ caused by the variation in $Z$ given by $\hat X =\hat \delta_{IV1} Z$. This is represented by the blue part of line segment representing $X$ in Figure 1b. This variation is given independing of the omitted variable $A$, and we use this variation in $\hat X$ to identify the causal effect of $X$ on $Y$ (represented by blue part of $Y$'s line segment). The estimates are given by   
+In the stage 1, we isolate the variation in $X$ caused by the variation in $Z$ given by $\hat X =\hat \delta_{IV1} Z$. This is represented by the blue part of line segment representing $X$ in Figure 1b. This variation is independent of the omitted variable $A$, and we use this variation in $\hat X$ to identify the causal effect of $X$ on $Y$ (represented by blue part of $Y$'s line segment). The estimates are given by   
 $$
 \begin{align*}
   \hat \delta_{IV1} &= \frac{Cov(X,Z)}{Var(Z)} = 1 \\
@@ -50,7 +50,7 @@ $$
 
 which is the correct causal effect of $X$ on $Y$. Although we only looked at the omitted variable bias, IV method is also useful to correct for "simultaneous causality bias" and the "Errors-in-variables bias". To wrap our discussions, let us formally state the necessary conditions required for the IV method {{< note id="3" />}}
 
-1. **Relevance:** The instrument variable $Z$ should be correlated with the casual variable of interest $X$. This can be easily checked from significance level of the first stage estimate. Higher correlation in the first stage means that the instrument can more effectively extract the exogenous variation in the regressor and hence the causal estimate has a lower standard error.
+1. **Relevance:** The instrument variable $Z$ should be correlated with the causal variable of interest $X$. This can be easily checked from significance level of the first stage estimate. Higher correlation in the first stage means that the instrument can more effectively extract the exogenous variation in the regressor and hence the causal estimate has a lower standard error.
 2. **Exogeneity:** The instrument variable is uncorrelated with the error term in the regression equation ($Cor(Z,\epsilon | C) = 0 $ where $C$ is a vector of controls). Since the error term in unobserved, this condition is not statistically testable and needs to be justified theoretically. Sometimes, this is specified as the combination of exclusion restriction and as-if random condition.
     - **Exclusion Restriction:** Fixing controls $C$, the instrument $Z$ affects outcome $Y$ only through $X$.  
     - **As-if random:** Fixing controls $C$, the instrument itself must not be endogenous. This rules out any reverse causality from $Y$ to $X$.
@@ -58,7 +58,9 @@ which is the correct causal effect of $X$ on $Y$. Although we only looked at the
 
 # Shift-Share instruments
 
-In many economic settings, the shocks that a researcher would like to use as instruments operate at a different level than the units being studied. For example, a researcher studying regional labor markets may find plausibly exogenous variation at the *industry* level --- such as changes in trade policy, technology, or national demand that hit specific industries. But the outcome equation is specified at the *regional* level, because that is where workers live, earn wages, and make decisions. The shock does not map one-to-one onto regions: a single industry shock affects many regions, and a single region is exposed to many industry shocks, each to a different degree depending on its industrial composition. *Shift-share* instrumental variables (also known as Bartik instruments) provide a principled way to translate these shock-level instruments to the unit level. This section draws on the practical guide by Borusyak, Hull, and Jaravel (2025).
+In many economic settings, the shocks that a researcher would like to use as instruments operate at a different level than the units being studied. For example, a researcher studying regional labor markets may find plausibly exogenous variation at the *industry* level --- such as changes in trade policy, technology, or national demand that hit specific industries. But the outcome equation is specified at the *regional* level, because that is where workers live, earn wages, and make decisions.
+
+The shock does not map one-to-one onto regions: a single industry shock affects many regions, and a single region is exposed to many industry shocks, each to a different degree depending on its industrial composition. *Shift-share* instrumental variables (also known as Bartik instruments) provide a principled way to translate these shock-level instruments to the unit level. This section draws on the practical guide by Borusyak, Hull, and Jaravel (2025).
 
 ## Structure of a shift-share instrument
 
@@ -83,7 +85,7 @@ where $L_{ij,t-1}/L_{uj,t-1}$ is region $i$'s lagged share of national employmen
 
 ## Two paths to identification
 
-As discussed above, the casual identification in the IV method requires the instrument to be relevant and exogenous. The core challenge with any shift-share instrument is arguing that $z_i$ is exogenous, i.e. uncorrelated with $\varepsilon_i$. Since $z_i$ combines two distinct sources of variation --- shifts and shares --- there are two paths to making this argument.
+As discussed above, the causal identification in the IV method requires the instrument to be relevant and exogenous. The core challenge with any shift-share instrument is arguing that $z_i$ is exogenous, i.e. uncorrelated with $\varepsilon_i$. Since $z_i$ combines two distinct sources of variation --- shifts and shares --- there are two paths to making this argument.
 
 ### Path 1: Exogenous shifts
 
@@ -91,19 +93,15 @@ The first strategy places the exogeneity burden on the shifts. If each shift $g_
 
 What makes this powerful is that the shares need not be exogenous at all. Regions that specialize in high-skill industries may have systematically different unobservables from those that specialize in low-skill industries. But as long as the shocks hitting high-skill and low-skill industries are themselves random, these compositional differences wash out in expectation.
 
-In fact, exogeneity of instrument requires an even weaker conditition given by
+More formally, exogeneity of the instrument requires a weaker condition than full randomization of each $g_k$:
 $$ \mathbb E\left[ g_k \left( \sum_i s_{ik} \varepsilon_i \right) \right] = 0 $$
-It imposes $\mathbb E[z_i \varepsilon_i ] \approx 0$. This requires that the Shift shocks must not be systematically correlated with the idiosyncratic unobservables of the units most heavily exposed to them.
+This is sufficient for $\mathbb{E}[z_i \varepsilon_i] \approx 0$. In words: each shift shock must not be systematically correlated with the idiosyncratic unobservables of the units most heavily exposed to it.
 
 Returning to the China shock example: even if regions with more manufacturing employment have systematically different labor market trends, the instrument is valid as long as China's productivity shocks across industries are unrelated to US regional labor market conditions.
 
 **Requirements:**
 - Many shifts $g_1, \ldots, g_K$ are necessary. Otherwise, there might be spurious correlation between shift shocks $g_k$ and average idiosyncratic shocks $\bar \varepsilon_i^k= \sum_i s_{ik} \varepsilon_i $.
-- Shares must sum to one for each unit $\sum_k s_{ik} = 1$.
-
-  To see why, if shocks have mean $\mu = \mathbb [g_k]$, then conditioned on endogenous variables $\varepsilon_i, s_{ik}$, 
-$$ \mathbb E[z_i| s_{ik}] = \mu \sum_k s_{ik} $$
-and the instrument will be correlated with with idiosyncratic unit shocks $\varepsilon_i$
+- Shares must sum to one for each unit ($\sum_k s_{ik} = 1$). Otherwise, if shares do not sum to one, then $\mathbb{E}[z_i \mid s_{ik}] = \mu \sum_k s_{ik}$ where $\mu = \mathbb{E}[g_k]$. Units with a larger sum of shares systematically get higher values of the instrument, and this sum may be correlated with $\varepsilon_i$, creating bias. Including $S_i = \sum_k s_{ik}$ as a control resolves this.
 
 **Practical considerations:**
 - Shift-share aggregates of any shift-level confounders $q_k$ should be included as controls (i.e. control for $\sum_k s_{ik} q_k$)
@@ -115,6 +113,8 @@ and the instrument will be correlated with with idiosyncratic unit shocks $\vare
 A different strategy assumes that the exposure shares $s_{ik}$ are exogenous. This can be interpreted as each share satisfying a parallel trends condition: outcomes of units with high versus low values of $s_{ik}$ would have trended similarly absent the treatment $g_k$.
 
 Under share exogeneity, the shift-share estimate can be viewed as pooling together $K$ "one-at-a-time" estimates, each using a single share $s_{ik}$ as the instrument. The exogenous shares approach is appropriate when the researcher is comfortable using any of the individual shares as an exogenous instrument --- that is, when there are no conceivable unobserved shocks that affect the outcome via the same shares used to construct the instrument. This is bolstered when the shares are "tailored" to the treatment, in the sense of mediating only the shocks to $x_i$ and not a broad set of shocks that might affect $y_i$.
+
+For example, Card (2009) studies the effect of immigration on native wages across US cities. The share $s_{ik}$ is the fraction of immigrants from origin country $k$ living in city $i$ in 1980, and the shift $g_k$ is the national inflow of immigrants from country $k$ in later decades. The share of Cuban immigrants in Miami, say, is a plausible instrument because it is "tailored" --- it captures exposure specifically to Cuban immigration shocks, not to labor market shocks in general. The parallel trends assumption is that cities with high versus low Cuban immigrant shares would have seen similar wage trends absent the immigration surge.
 
 **Practical considerations:**
 - Shares must be "tailored" to the treatment, not "generic" (capturing exposure to many types of shocks)
