@@ -1,12 +1,12 @@
 ---
 title: "IV method and Shift-Share instruments"
-subtitle: "A quick introduction to IV regressions in causal analysis and Shift Share instruments"
-date: 2025-10-17T18:19:00+05:30
+subtitle: ""
+date: 2025-10-17T11:34:00
 author: "Kartik Patekar"
 tags: ["empirics", "externality"]
 categories: ["Economics"]
 draft: false
-description: " "
+description: "A quick introduction to IV regressions in causal analysis and Shift Share instruments"
 notes:
   1: "Section 3.1 of the book \"Mostly Harmless Economics\" provides a good justification for using linear regressions in causal analysis. Also see Lecture 1 in [Prof. Wager's Stats 361 notes](https://web.stanford.edu/~swager/stats361.pdf)"
   2: "To be precise, the method described here calculates the 2SLS estimator, which is the most popular estimator in the class of IV estimators. Other IV estimators include the limited information maximum likelihood (LIML) estimator, generalized method of moments (GMM) estimator, and k-estimators."

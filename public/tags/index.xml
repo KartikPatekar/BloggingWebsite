@@ -6,33 +6,40 @@
     <description>Recent content in Tags on Thoughts on track</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Dec 2025 18:19:00 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 06 Mar 2026 17:32:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Economic Growth</title>
+      <link>http://localhost:1313/tags/economic-growth/</link>
+      <pubDate>Fri, 06 Mar 2026 17:32:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/economic-growth/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Empirics</title>
+      <link>http://localhost:1313/tags/empirics/</link>
+      <pubDate>Fri, 06 Mar 2026 17:32:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/empirics/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AI</title>
       <link>http://localhost:1313/tags/ai/</link>
-      <pubDate>Fri, 05 Dec 2025 18:19:00 +0530</pubDate>
+      <pubDate>Fri, 05 Dec 2025 18:19:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/ai/</guid>
       <description></description>
     </item>
     <item>
       <title>Automation</title>
       <link>http://localhost:1313/tags/automation/</link>
-      <pubDate>Fri, 05 Dec 2025 18:19:00 +0530</pubDate>
+      <pubDate>Fri, 05 Dec 2025 18:19:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/automation/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Empirics</title>
-      <link>http://localhost:1313/tags/empirics/</link>
-      <pubDate>Fri, 17 Oct 2025 18:19:00 +0530</pubDate>
-      <guid>http://localhost:1313/tags/empirics/</guid>
       <description></description>
     </item>
     <item>
       <title>Externality</title>
       <link>http://localhost:1313/tags/externality/</link>
-      <pubDate>Fri, 17 Oct 2025 18:19:00 +0530</pubDate>
+      <pubDate>Fri, 17 Oct 2025 11:34:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/externality/</guid>
       <description></description>
     </item>

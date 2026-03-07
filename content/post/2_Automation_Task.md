@@ -1,7 +1,7 @@
 ---
 title: "Automation, AI, and the Future of Work: Insights from Economics"
 subtitle: ""
-date: 2025-12-05T18:19:00+05:30
+date: 2025-12-05T18:19:00
 author: "Kartik Patekar"
 tags: ["automation", "AI"]
 categories: ["Economics"]
