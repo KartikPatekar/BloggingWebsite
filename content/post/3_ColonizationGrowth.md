@@ -44,13 +44,13 @@ Using settler mortality as an instrument for institutional quality, AJR estimate
 
 **Critique**: Not all economists agree that institutions are the dominant channel. Several studies argue that tropical geography directly constrains growth through disease burden (particularly malaria) and low agricultural productivity, and that the AJR's 'settler mortality' instrument may partly capture geographic effects rather than purely institutional ones. However, much of the subsequent literature has favored institutional quality as the stronger predictor once properly instrumented.
 
-### Transmission through cultural impact
+### Transmission through culture
 
 Another channel through which colonization impacts economic development is through colonizers influence on local culture - defiend as socially transmitted beliefs, values, and decision-making heuristics. 
 
 The seminal work by Nunn and Wantchekon (2011) [[2]] isolates this cultural channel by examining the long-term impact of Africa's slave trades on interpersonal trust. They establish that communities heavily exposed to historical extraction developed heuristic "rules of thumb" to distrust others. This cultural trait persists today, significantly hampering modern trade and institutional function. Bisin and Verdier (2017) [[8]] formally model the joint evolution of culture and institutions. They demonstrate how extractive colonial shocks can trap regions in an equilibrium where low-trust cultural norms and weak formal institutions mutually reinforce each other over generations.
 
-### Human Capital Accumulation
+### Human Capital accumulation
 
 Glaeser et al. (2004) [[3]](https://scholar.harvard.edu/shleifer/publications/do-institutions-cause-growth) challenge AJR from a different angle, arguing that what European settlers brought was not just institutions but also *human capital*—knowledge, skills, and norms. They show that initial human capital levels are a stronger predictor of subsequent growth than institutional measures, suggesting that colonial education investments (or the lack thereof) may matter as much as formal institutional design.
 
