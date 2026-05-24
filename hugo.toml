@@ -59,6 +59,20 @@ home = ["HTML", "RSS", "Algolia"]
   artalk_server = ""
   artalk_site = ""
 
+  [params.giscus]
+    data_repo = "KartikPatekar/BloggingWebsite_comments"
+    data_repo_id = "R_kgDOSmQ8HA"
+    data_category = "Announcements"
+    data_category_id = "DIC_kwDOSmQ8HM4C9uN9"
+    data_mapping = "pathname"
+    data_strict = "0"
+    data_reactions_enabled = "1"
+    data_emit_metadata = "0"
+    data_input_position = "bottom"
+    data_theme = "preferred_color_scheme"
+    data_lang = "en"
+    crossorigin = "anonymous"
+
   # Disabled for security
   reward = false
   
