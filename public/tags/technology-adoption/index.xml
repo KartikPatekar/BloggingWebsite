@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Technology Adoption on Thoughts on track</title>
-    <link>http://localhost:1313/tags/technology-adoption/</link>
+    <link>http://localhost:1315/tags/technology-adoption/</link>
     <description>Recent content in Technology Adoption on Thoughts on track</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 24 May 2026 13:42:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/technology-adoption/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1315/tags/technology-adoption/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Technology and Development in low-income settings: Learnings from 20 years of emprical research</title>
-      <link>http://localhost:1313/post/4_techimpact_review/</link>
+      <link>http://localhost:1315/post/4_techimpact_review/</link>
       <pubDate>Sun, 24 May 2026 13:42:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/4_techimpact_review/</guid>
-      <description>&lt;p&gt;Few forces have shaped human welfare over the past century as profoundly as technology. From the diffusion of electricity and the Green Revolution to vaccines and mobile telephony, successive waves of innovation have compressed distances, raised agricultural yields, lengthened lives, and broadened access to information in ways that would have seemed implausible to earlier generations. In the wealthier parts of the world, technology has become so deeply embedded in daily life — in how people work, learn, communicate, and transact — that it functions less as a visible input than as background infrastructure. And there is something genuinely egalitarian about the underlying economics: unlike land or natural resources, the underlying knowledge is in principle transferable across borders. A technique or platform that raises productivity in one place can, in principle, do so equally elsewhere at negligible marginal cost.&lt;/p&gt;</description>
+      <guid>http://localhost:1315/post/4_techimpact_review/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;&#xA;&lt;p&gt;Few forces have shaped human welfare over the past century as profoundly as technology. From the diffusion of electricity and the Green Revolution to vaccines and mobile telephony, successive waves of innovation have compressed distances, raised agricultural yields, lengthened lives, and broadened access to information in ways that would have seemed implausible to earlier generations. In the wealthier parts of the world, technology has become so deeply embedded in daily life — in how people work, learn, communicate, and transact — that it functions less as a visible input than as background infrastructure. And there is something genuinely egalitarian about the underlying economics: unlike land or natural resources, knowledge is non-rival and in principle transferable across borders at negligible cost. A smallholder in Bihar and a farmer in Iowa can, in principle, benefit equally from the same weather information platform or the same irrigation technology.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

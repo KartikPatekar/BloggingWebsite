@@ -22,7 +22,7 @@ home = ["HTML", "RSS", "Algolia"]
   SEOTitle = "Thoughts on track | Kartik Patekar"
   description = "Your description here"
   keyword = "your, keywords, here"
-  slogan = "My attempts at understanding research papers"
+  slogan = "My attempts at understanding the world"
   upstreamAttribution = true
 
   image_404 = "img/404-bg.jpg"
@@ -45,12 +45,24 @@ home = ["HTML", "RSS", "Algolia"]
   sidebar_about_description = "I am a Economics PhD at Boston University. I am broadly intersted in applied microeconomics. My specific interest is in studying technology adoption in developing countries."
   sidebar_avatar = "general/KP_Photo.png"
 
-  featured_tags = true 
-  featured_condition_size = 1 
+  featured_tags = true
+  featured_condition_size = 1
+
+  # Disabled for security
+  reward = false
+
+  friends = false
+  bookmarks = false
+  about_me = true
+  last_posts = true
+
+  # Custom CSS and JavaScript
+  custom_css = ["css/custom.css", "css/toggle.css"]
+  custom_js = ["js/toggle.js"]
 
   # Analytics - disabled by default
   ba_track_id = ""
-  
+
   # Comment systems - disabled by default
   disqus_proxy = ""
   disqus_site = ""
@@ -72,18 +84,6 @@ home = ["HTML", "RSS", "Algolia"]
     data_theme = "preferred_color_scheme"
     data_lang = "en"
     crossorigin = "anonymous"
-
-  # Disabled for security
-  reward = false
-  
-  friends = false
-  bookmarks = false
-  about_me = true
-  last_posts = true
-
-  # Custom CSS and JavaScript
-  custom_css = ["css/custom.css", "css/toggle.css"]
-  custom_js = ["js/toggle.js"]
 
   [params.social]
   rss = true 
